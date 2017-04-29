@@ -6,9 +6,9 @@ int main() {
     // Declara variables de distintos tipos de datos
    
 
-	int a = 7;
-	int b = 15;
-	int c = -2;
+	int a = 1;
+	int b = 3;
+	int c = 2;
 	int d;
 	double x; 
 	double y;
@@ -23,8 +23,8 @@ printf("No tiene soluciones reales." );
 else
 {
 //calcula x0 y x1
-x = (-b+sqrt(d))/(2*a);
-y = (-b-sqrt(d))/(2*a);
+x = (-b+sqrt (d))/(2*a);
+y = (-b-sqrt (d))/(2*a);
 }
 	    
     // Imprime x0 y x1 
