@@ -10,8 +10,8 @@ int main() {
 	int b = 15;
 	int c = -2;
 	int d;
-	double x0; 
-	double X1;
+	double x; 
+	double y;
 
 	
    // Calculo de discriminante
@@ -23,15 +23,15 @@ printf("No tiene soluciones reales." );
 else
 {
 //calcula x0 y x1
-x0 = (-b+sqrt(d))/(2*a);
-x1 = (-b-sqrt(d))/(2*a);
+x = (-b+sqrt(d))/(2*a);
+y = (-b-sqrt(d))/(2*a);
 }
 	    
     // Imprime x0 y x1 
 
 
-	printf("x0 = %d\n", x0);
-  	printf("x1 = %d\n", x1);
+	printf("x0 = %lf\n", x);
+  	printf("x1 = %lf\n", y);
 
 
 
