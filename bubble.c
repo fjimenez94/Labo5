@@ -4,40 +4,59 @@
 int main() 
 {
 
-	    // Declara variables de distintos tipos de datos
-	   
-
-		int f1 = 1;
-		int f2 = 1;
-		int f3 = 2;
-		
-
+	    // Declara variables de distintos tipos de dato	   
+	int lon = 0;
+	int bandera = 0;
+	int bubble();
+	void swap(int pos, int sig);
 
 	printf("Ingrese longitud del arreglo: ");
-	    scanf("%d", &lon);
-	    int datos[lon];
+	scanf("%d", &lon);
+	int datos[lon];
 	    
 	
-	if (term>0)
+	if (lon>0)
 	{
+	//aca pide datos
 	  printf("Ingrese terminos del arreglo: ");
 	  for(int x=0;x<lon;x+=1)
 	    {
 
-		  scanf("%d", &lon[x]);
+		  scanf("%d", &datos[x]);
 	    }
-	    for(int x=0;x<lon;x+=1)
-	    {
-
-		  printf("%d\n", lon[x]);
-	    }
+	    //acá acomoda
+	    bubble();
+	 
 
 	}
 	else
 	{
 	printf("Dato ingresado invalido.\n");
 	}
-
+	
+	
+	void bubble()
+	{
+	  for(int x=0;x<lon;x+=1)
+	    {
+	    	int y=x+1;
+		if(x>y)
+		{
+		bandera = swap(x,y);
+		}
+	    }  
+	    
+	}
+	
+	void swap(int pos, int sig)
+	{
+	  int temp = datos[pos];
+	  datos[pos] = datos[sig];
+	  datos[sig] = temp;
+	   
+	    return 1;
+	    
+	}
   
 
 
