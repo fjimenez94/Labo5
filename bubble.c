@@ -2,7 +2,7 @@
 #include <math.h>
 int lon = 0;
 int bandera = 1;
-int swap(int pos, int sig, int datos[]);
+void swap(int pos, int sig, int datos[]);
 void pasada(int datos[]);
 
 int main() 
@@ -18,30 +18,34 @@ int main()
 		if (lon>0)
 		{
 		//aca pide datos
-		printf("Ingrese terminos del arreglo: ");
+			printf("Ingrese terminos del arreglo: ");
 			for(int x=0;x<lon;x+=1)
 			{
 				scanf("%d", &datos[x]);
 			}
 		    
 		//acá acomoda
-		while(bandera == 1)
-		{
-			bandera=0;
-			pasada(datos);
-		}
-		   
-		for(int x=0;x<lon;x+=1)
-		{
-			printf("%d ", datos[x]);
-		}
-		    
+			do
+			{
+				bandera=0;
+				pasada(datos);
+				
+			}
+			while(bandera==1);
+			
+			
+			   
+			for(int x=0;x<lon;x+=1)
+			{
+				printf("%d ", datos[x]);
+			}
+			    		
 
-		}
-		else
-		{
-			printf("Dato ingresado invalido.\n");
-		}
+			}
+			else
+			{
+				printf("Dato ingresado invalido.\n");
+		}	
 	
 	 
 	return 0;
@@ -53,18 +57,19 @@ void pasada(int datos[])
 	{
 		int y=x+1;
 		
-		if(x>y)
+		if(datos[x]>datos[y])
 		{
-			bandera = swap(x, y, datos);
+			bandera = 1;
+			swap(x, y, datos);
+			//printf("bandera\n");
 		}
 	}  	    
 }
 	
-int swap(int pos, int sig, int datos[])
+void swap(int pos, int sig, int datos[])
 {
 	int temp = datos[pos];
 	datos[pos] = datos[sig];
 	datos[sig] = temp;
-	   
-	return 1;
+
 }
