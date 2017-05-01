@@ -7,13 +7,16 @@ int main() {
    
 
 	int a = 1;
-	int b = 5;
+	int b = -5;
 	int c = 2;
 	int d;
 	double x; 
 	double y;
 
-	
+		printf("%dx^2+%dx+%d=0\n", a,b,c);
+  	printf("a = %d\n", a);
+	printf("b = %d\n", b);
+  	printf("c = %d\n", c);
    // Calculo de discriminante
 	d = b*b-4*a*c;
 if (d<0)
@@ -30,7 +33,7 @@ y = (-b-sqrt (d))/(2*a);
     // Imprime x0 y x1 
 
 
-	printf("x0 = %lf\n", x);
+	printf("\nx0 = %lf\n", x);
   	printf("x1 = %lf\n", y);
 
 

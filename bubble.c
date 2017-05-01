@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+    // Declara variables de distintos tipos de datos y funciones
 int lon = 0;
 int bandera = 1;
 void swap(int pos, int sig, int datos[]);
@@ -8,7 +9,7 @@ void pasada(int datos[]);
 int main() 
 {
 
-		    // Declara variables de distintos tipos de dato	   
+		     
 	
 	printf("Ingrese longitud del arreglo: ");
 	scanf("%d", &lon);
@@ -24,19 +25,20 @@ int main()
 				scanf("%d", &datos[x]);
 			}
 		    
-		//acá acomoda
+		//acá acomoda los datos
 			do
 			{
-				bandera=0;
-				pasada(datos);
-				
+				bandera=0;		//BANDERA EN 0
+				pasada(datos);		//indica sin 								//intercambios
+							//en la pasada
 			}
 			while(bandera==1);
 			
-			
-			   
+			printf("\n");
+		//Este for imprime  
 			for(int x=0;x<lon;x+=1)
 			{
+				
 				printf("%d ", datos[x]);
 			}
 			    		
@@ -51,6 +53,7 @@ int main()
 	return 0;
 }
 
+//esta función revisa si es necesario intercambiar valores 
 void pasada(int datos[])
 {
 	for(int x=0;x<lon;x+=1)
@@ -61,10 +64,12 @@ void pasada(int datos[])
 		{
 			bandera = 1;
 			swap(x, y, datos);
-			//printf("bandera\n");
+		
 		}
 	}  	    
 }
+
+//esta funcion intercambia valores
 	
 void swap(int pos, int sig, int datos[])
 {
