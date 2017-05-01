@@ -41,7 +41,7 @@ int main() {
 	}
 	else
 	{
-	printf("Dato ingresado invalido.");
+	printf("Dato ingresado invalido.\n");
 	}
 
   
